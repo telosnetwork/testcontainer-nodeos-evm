@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 RUN apt-get update && \
-    apt-get install -y wget vim net-tools curl
+    apt-get install -y wget vim net-tools curl jq
 
 RUN wget https://github.com/AntelopeIO/leap/releases/download/v5.0.2/leap_5.0.2_amd64.deb && \
     dpkg -i leap_5.0.2_amd64.deb || apt-get install -f -y
