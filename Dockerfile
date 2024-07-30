@@ -11,6 +11,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /app
 
 COPY config.ini /node/config.ini
+COPY logging.json /node/logging.json
 COPY genesis.json /node/genesis.json
 COPY devnet.wallet /root/eosio-wallet/devnet.wallet
 
