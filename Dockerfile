@@ -26,6 +26,8 @@ COPY logging.json /node-prod-2/logging.json
 
 COPY entrypoint.sh /app/entrypoint.sh
 
+COPY chaos_monkey.sh /app/chaos_monkey.sh
+
 # Do the extraction in entrypoint.sh so shared_memory.bin remains sparse
 #RUN tar -xvf /node/data.tar.gz -C /node && mv /node/data /node/data-dir
 
