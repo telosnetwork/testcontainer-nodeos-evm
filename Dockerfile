@@ -1,4 +1,4 @@
-FROM rust:1-slim-bullseye
+FROM rust:1.86-slim-bullseye
 
 RUN apt-get update && \
     apt-get install \
