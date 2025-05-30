@@ -76,7 +76,7 @@ fi
 [ -f $CONSENSUS_ROOT/.env ] && . $CONSENSUS_ROOT/.env
 
 [ -z "$CONSENSUS_CONFIG" ] && CONSENSUS_CONFIG=$CONSENSUS_ROOT/config.toml
-[ -z "$LOG_PATH" ] && LOG_PATH=$CONSENSUS_ROOT/consensus.log
+LOG_PATH=$CONSENSUS_ROOT/consensus.log
 
 $CONSENSUS_BIN_PATH --config $CONSENSUS_CONFIG >> "$LOG_PATH" 2>&1 &
 
