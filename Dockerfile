@@ -1,4 +1,4 @@
-FROM rust:1-slim-bullseye
+FROM rust:1.86-slim-bullseye
 
 RUN apt-get update && \
     apt-get install \
@@ -35,8 +35,6 @@ WORKDIR /tcc
 
 RUN bash build.sh
 
-COPY tcc_config.toml config.toml
-
 # setup reth
 WORKDIR /
 
@@ -45,6 +43,8 @@ RUN git clone https://github.com/telosnetwork/telos-reth.git -b telos-main
 WORKDIR /telos-reth
 
 RUN bash build.sh
+
+COPY tcc_config.toml /tcc/config.toml
 
 COPY reth_env .env
 COPY reth_jwt.hex data/jwt.hex
