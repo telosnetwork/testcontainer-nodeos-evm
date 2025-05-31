@@ -1,0 +1,38 @@
+# EVM Chain id, Telos mainnet is 40 and testnet is 41
+chain_id = 41
+
+# Execution API http endpoint (JWT protected endpoint on reth)
+execution_endpoint = 'http://127.0.0.1:9551'
+
+# The JWT secret used to sign the JWT token
+jwt_secret = '7646201797f52b7170389a5561632120d21e89c400bcfe27110ee66bcf15a1b8'
+
+# Nodeos ship ws endpoint
+ship_endpoint = 'ws://127.0.0.1:39999'
+
+# Nodeos http endpoint
+chain_endpoint = 'http://127.0.0.1:8890'
+
+# Block count in between finalize block calls while syncing
+batch_size = 1
+
+block_delta = 57
+
+# The parent hash of the start_block
+prev_hash = 'b25034033c9ca7a40e879ddcc29cf69071a22df06688b5fe8cc2d68b4e0528f9'
+
+# Start block to start with, should be at or before the first block of the execution node
+evm_start_block = 1
+
+# (Optional) Expected block hash of the start block
+# validate_hash: Option<String>
+
+# (Optional) Block number to stop on, default is U32::MAX
+#evm_stop_block = 354408792
+
+log_level = 'info'
+data_path = '/data'
+block_checkpoint_interval = 1000
+maximum_sync_range = 100000
+latest_blocks_in_db_num = 500
+
